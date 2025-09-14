@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play SkateBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edebdc;
+        }
+
+        .font-russo-one {
+            font-family: "Russo One", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #edebdc;
+        }
+
+        /* Loading Animation CSS */
+        .sk-cube-grid {
+            width: 40px;
+            height: 40px;
+            margin: 100px auto;
+        }
+
+        .sk-cube-grid .sk-cube {
+            width: 33%;
+            height: 33%;
+            background-color: #333;
+            float: left;
+            -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+        }
+
+        .sk-cube-grid .sk-cube1 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        .sk-cube-grid .sk-cube2 {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+
+        .sk-cube-grid .sk-cube3 {
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+
+        .sk-cube-grid .sk-cube4 {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+
+        .sk-cube-grid .sk-cube5 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        .sk-cube-grid .sk-cube6 {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+
+        .sk-cube-grid .sk-cube7 {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        .sk-cube-grid .sk-cube8 {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+
+        .sk-cube-grid .sk-cube9 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        @-webkit-keyframes sk-cubeGridScaleDelay {
+
+            0%,
+            70%,
+            100% {
+                -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+            }
+
+            35% {
+                -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1);
+            }
+        }
+
+        @keyframes sk-cubeGridScaleDelay {
+
+            0%,
+            70%,
+            100% {
+                -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+            }
+
+            35% {
+                -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#edebdc]">
+    <div id="loading-wrapper" class="fixed top-0 left-0 w-full h-full bg-[#303643] z-[9999]">
+        <div class="absolute w-[80px] h-[80px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" mx-auto bg-[#edebdc]">
+        <header class="flex items-center mx-auto h-[50px] mt-[80px] sm:mt-[70px] lg:mt-[10px] mb-[50px] lg:mb-[95px]">
+            <span
+                class="font-russo-one text-[#303643] font-bold whitespace-nowrap text-3xl ml-5 mt-[80px] sm:text-4xl sm:mt-[70px] lg:text-5xl lg:mt-[55px] lg:ml-[135px]">TAIPEI<br>SKATEBOARD
+                MAP</span>
+            <span class="mt-[35px] ml-[90px] sm:ml-[260px] lg:ml-[735px] lg:max-h-[50px] lg:max-w-[50px]">
+                <a href="index.html"><img src="./img/main.jpg" alt="front-page"></a>
+            </span>
+        </header>
+
+        <nav class="bg-[#303643] lg:mt-[50px] w-full">
+            <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4">
+                <a class="text-white sm:opacity-100 lg:opacity-0" href="#">更多資訊</a>
+                <button id="navbar-toggler" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full lg:grid  lg:w-auto" id="navbar-links">
+                    <div class="flex flex-col lg:flex-row w-full">
+                        <a class="block py-2 px-3 text-[#edebdc] text-center text-xl font-bold lg:felx-1 hover:bg-gray-500"
+                            href="index.html">滑板這裡看</a>
+                        <a class="block py-2 px-3 text-[#edebdc] text-center text-xl font-bold lg:flex-1 bg-black lg:bg-dark hover:bg-gray-500"
+                            href="play.html">滑板玩什麼</a>
+                        <a class="block py-2 px-3 text-[#edebdc] text-center text-xl font-bold lg:flex-1 hover:bg-gray-500"
+                            href="map.html">滑板哪裡玩</a>
+                        <a class="block py-2 px-3 text-[#edebdc] text-center text-xl font-bold lg:flex-1 hover:bg-gray-500"
+                            href="buy.html">滑板怎麼買</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mx-auto flex flex-col-reverse lg:flex-row lg:ml-[135px] lg:mx-0">
+            <div class="mx-auto mt-[-60px] sm:mt-0 lg:mt-[35px]">
+                <iframe class="w-full max-w-[500px] h-[282px] sm:max-w-full sm:w-[600px] sm:h-[370px]" frameborder="0"
+                    src="https://www.youtube.com/embed/1D8_hcVvNd0" allowfullscreen="true"></iframe>
+            </div>
+            <div class="w-full max-w-[500px] h-auto mx-auto mt-0 lg:mt-[15px] sm:max-w-full sm:w-[600px] lg:ml-[25px]">
+                <p class="font-russo-one text-4xl font-bold p-[15px] bg-[#d1cbc2] text-[#303643] mb-0 mt-5">OLLIE</p>
+                <p
+                    class="text-xl font-bold bg-[#d1cbc2] text-[#303643] leading-relaxed p-[15px] pb-[60px] sm:pb-[145px]">
+                    Ollie也就是豚跳，是滑板運動的一項基本技能。前腳切齊四顆螺絲的後兩顆，後腳站在板尾最翹的地方，重心在中間，蹲低往下點，板子點道地板之後跳起來，前腳往前將板刷平，之後四顆輪子同時落地。
+                </p>
+            </div>
+        </div>
+
+        <div class="mx-auto flex flex-col lg:flex-row lg:ml-[135px] lg:mx-0">
+            <div
+                class="w-full max-w-[500px] h-auto mx-auto mt-[50px] lg:mt-[-5px] sm:max-w-full sm:w-[600px] lg:mr-[25px]">
+                <p class="font-russo-one text-4xl font-bold p-[15px] bg-[#d1cbc2] text-[#303643] mb-0 mt-5">KICK FLIP
+                </p>
+                <p
+                    class="text-xl font-bold bg-[#d1cbc2] text-[#303643] leading-relaxed p-[15px] pb-[60px] sm:pb-[115px]">
+                    一個滑板的基礎動作，由“滑板教父"Rodney
+                    Mullen”發明。後腳以ollie的姿勢站好，前腳站於板的中前部，腳尖不要壓過板邊，後腳發力起跳，前腳翻腳背拉板時做變形向1點鐘方向踢出(指右腳在前，左腳在前則向11點鐘踢出)，用力得當板會在腳下翻滾，注意後腳一定要高收，待板轉完360度後控板落地。
+                </p>
+            </div>
+            <div class="mx-auto mt-4 lg:mb-[15px]">
+                <iframe class="w-full max-w-[500px] h-[282px] sm:max-w-full sm:w-[600px] sm:h-[370px]" frameborder="0"
+                    src="https://www.youtube.com/embed/xeXc6JdcOuE" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+
+        <div class="mx-auto flex flex-col-reverse lg:flex-row lg:ml-[135px] lg:mx-0">
+            <div class="mx-auto mt-[-30px] sm:mt-0">
+                <iframe class="w-full max-w-[500px] h-[282px] sm:max-w-full sm:w-[600px] sm:h-[370px]" frameborder="0"
+                    src="https://www.youtube.com/embed/IG8vVbe4AkM" allowfullscreen="true"></iframe>
+            </div>
+            <div class="w-full max-w-[500px] h-auto mx-auto mt-0 lg:mt-[-20px] sm:max-w-full sm:w-[600px] lg:ml-[25px]">
+                <p class="font-russo-one text-4xl font-bold p-[15px] bg-[#d1cbc2] text-[#303643] mb-0 mt-5">360 FLIP</p>
+                <p
+                    class="text-xl font-bold bg-[#d1cbc2] text-[#303643] leading-relaxed p-[15px] pb-[60px] sm:pb-[145px]">
+                    360flip也稱作 Treflip 或 Three Flip，也就是同時做360
+                    Shuvit和Kickflip。後腳置於板尾，前腳略靠前；後腳用力壓板尾，同時有撥的動作，前腳如踢翻般使板旋轉，等待板在你兩腿間旋轉360度，以後腳接板，屈膝以緩衝。
+                </p>
+            </div>
+        </div>
+
+        <footer class="flex flex-col justify-center items-center w-full py-10 bg-[#303643] mt-24 lg:mt-[100px]">
+            <p class="text-[#edebdc] whitespace-nowrap">
+                e-mail : s111019019@stu.ntue.edu.tw / s111019039@stu.ntue.edu.tw
+            </p>
+            <div class="flex space-x-4 mt-2">
+                <a href="https://www.youtube.com/"><img class="youtube" src="./img/youtube.png" alt="youtube"></a>
+                <a href="https://www.instagram.com/"><img class="instagram" src="./img/instagram.png"
+                        alt="instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Page loading script
+        window.addEventListener('load', function () {
+            const loadingWrapper = document.getElementById('loading-wrapper');
+            if (loadingWrapper) {
+                loadingWrapper.style.display = 'none';
+            }
+        });
+
+        // Navbar toggle script
+        const toggler = document.getElementById('navbar-toggler');
+        const links = document.getElementById('navbar-links');
+        if (toggler && links) {
+            toggler.addEventListener('click', function () {
+                links.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
